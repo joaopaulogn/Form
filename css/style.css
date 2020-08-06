@@ -1,0 +1,206 @@
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* RESET */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;;
+}
+
+/* GENERAL STYLES */
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem;
+    background-image: linear-gradient(
+        to right bottom,
+        #FF416C,
+        #FF4B2B
+    );
+}
+
+.box {
+    width: 50%;
+    height: 50rem;
+    padding: 3rem 3.5rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0, .2);
+    background-image: linear-gradient(
+        105deg,
+        rgba(255, 255, 255, .8) 0%,
+        rgba(255, 255, 255, .8) 55%,
+        transparent 52%
+    ),
+    url(../images/img.jpg);
+    background-size: cover;
+    border-radius: .3rem;
+}
+
+/* OTHER STYLES */
+.heading-primary {
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #8A2387, #E94057, #F27121);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    margin-bottom: 5rem;
+}
+
+/* GENERAL FORM STYLES */
+.form {
+    width: 50%;
+}
+
+.form__group:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.form__group:nth-of-type(2) {
+    margin-bottom: 1.5rem;
+}
+
+.form__group:last-of-type {
+    margin-bottom: 2.5rem;
+}
+
+/* INPUT STYLES */
+.form__input {
+    display: block;
+    width: 85%;
+    padding: 1rem 1.5rem;
+    border-radius: .3rem;
+    border: none;
+    border-bottom: .3rem solid transparent;
+    background-color: #FFFFF3;
+    color: #333030;
+    box-shadow: 0 1rem 2rem rgba(0,0,0, .2);
+    transition: all .3s;
+}
+
+.form__input::-webkit-input-placeholder {
+    font-size: 1.4rem;
+    color: rgba(0,0,0, .5);
+}
+
+.form__input:focus {
+    outline: none;
+    border-bottom-color: #58C9B9;
+}
+
+.form__input:focus:invalid {
+    border-bottom: .3rem solid #F17F42;
+}
+
+.form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-3.8rem);
+}
+
+.form__label {
+    display: inline-block;
+    margin-top: .5rem;
+    margin-left: 1.5rem;
+    font-size: 1.4rem;
+    color: rgba(0,0,0, .5);
+    opacity: 1;
+    transition: all .3s;
+}
+
+.form__radio-group {
+    display: inline-block;
+    width: 49%;
+    font-size: 1.6rem;
+}
+
+.form__radio-group:not(:last-child) {
+    margin-bottom: 4rem;
+}
+
+.form__radio-label {
+    font-size: 1.6rem;
+    color: #333030;
+    transform: translateX(2rem);
+    cursor: pointer;
+    
+    position: relative;
+}
+
+.form__radio-button {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    margin-right: .5rem;
+    border: .4rem solid #CB356B;
+    border-radius: 50%;
+    transform: translateY(.8rem);
+
+    position: relative;
+}
+
+.form__radio-button::after {
+    content: "";
+    display: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #CB356B;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form__radio-input {
+    display: none;
+}
+
+.form__radio-input:checked + .form__radio-label > .form__radio-button::after {
+    display: inline-block;
+}
+
+/* BUTTON STYLES */
+.btn {
+    width: 40%;
+    padding: 1rem 1.5rem;
+
+    font-family: inherit;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #FFFFF3;
+
+    border: none;
+    background-image: linear-gradient(to right, #F27121, #E94057, #8A2387);
+    box-shadow: 0 1rem 2rem rgba(0,0,0, .25);
+    border-radius: .3rem;
+
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn:hover {
+    outline: none;
+    transform: translateY(-.3rem);
+}
+
+.btn:focus {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .25);
+    transform: translateY(-.15rem);
+}

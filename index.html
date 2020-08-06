@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="João Paulo Gonçalves Neto">
+    <meta name="description" content="Form with nice gradient and custom radio buttons">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Form</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <form action="#" class="form">
+                <h1 class="heading-primary">Contact me</h1>
+
+                <div class="form__group">
+                    <input type="text" name="name" id="name" class="form__input" required placeholder="Full name">
+                    <label for="name" class="form__label">Full name</label>
+                </div>
+
+                <div class="form__group">
+                    <input type="email" name="email" id="email" class="form__input" required placeholder="Email address">
+                    <label for="email" class="form__label">Email address</label>
+                </div>
+
+                <div class="form__group">
+                    <div class="form__radio-group">
+                        <input type="radio" name="size" id="project1" class="form__radio-input">
+                        <label for="project1" class="form__radio-label">
+                            <span class="form__radio-button"></span>
+                            Dashboard
+                        </label>
+                    </div>
+
+                    <div class="form__radio-group">
+                        <input type="radio" name="size" id="project2" class="form__radio-input">
+                        <label for="project2" class="form__radio-label">
+                            <span class="form__radio-button"></span>
+                            Landing Page
+                        </label>
+                    </div>
+                </div>
+
+                <button class="btn">Submit &rarr;</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
